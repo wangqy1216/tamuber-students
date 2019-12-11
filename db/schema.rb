@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20191207222409) do
+ActiveRecord::Schema.define(version: 20191210213220) do
 
   create_table "cart_routes", force: :cascade do |t|
     t.decimal "length"
@@ -48,6 +48,14 @@ ActiveRecord::Schema.define(version: 20191207222409) do
     t.float "latitude"
     t.float "longitude"
     t.string "address"
+  end
+
+  create_table "photos", force: :cascade do |t|
+    t.string "name"
+    t.text "description"
+    t.string "image"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "trips", force: :cascade do |t|
