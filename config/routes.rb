@@ -1,5 +1,4 @@
 Rails.application.routes.draw do
-  resources :photos
   get 'users/show'
 
   get 'tamuber/index'
@@ -29,5 +28,9 @@ Rails.application.routes.draw do
   resources :users
   get '/update',  to: 'users#show'
   patch '/update',  to: 'users#update'
+  get 'uploadPhoto', to: 'photos#index'
+  
+  resources :photos
+
   
 end

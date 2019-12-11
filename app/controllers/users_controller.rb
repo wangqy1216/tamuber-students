@@ -30,13 +30,14 @@ class UsersController < ApplicationController
     @user.update_attribute(:phone, user_params[:phone])
     redirect_to specify_path
   end
+  
+  def uploadPhoto
+    redirect_to photos_path
+  end
 
   private
-
   def user_params
     params.require(:user).permit(:firstname, :lastname, :email, :phone, :password,
                                  :password_confirmation)
   end
-    
-   
 end

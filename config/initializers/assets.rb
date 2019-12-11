@@ -42,3 +42,6 @@ Rails.application.config.assets.precompile += %w( sessions.css users.css )
 # Edit Manish end
 #Javascript for "end" view
 Rails.application.config.assets.precompile += %w( end.js )
+
+
+Rails.application.config.assets.precompile += %w( photos.css )
